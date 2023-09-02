@@ -60,9 +60,7 @@ function App() {
 
   return (
     <main className='main'>
-      <header className='header'>
-        <div className='header__time'>00 : 00</div>
-      </header>
+      <header className='header'></header>
       <form className='form' onSubmit={hendlerSearch}>
         {/* <input
           className='input'
@@ -77,7 +75,12 @@ function App() {
             return <option value={item.art}>{item.name}</option>;
           })}
         </datalist> */}
-        <Select options={option} onChange={evt=>{setInput(evt.value)}}></Select>
+        <Select
+          options={option}
+          onChange={(evt) => {
+            setInput(evt.value);
+          }}
+        ></Select>
         <button className='button' type='submit'>
           Отправить
         </button>
