@@ -60,9 +60,7 @@ function App() {
 
   return (
     <main className='main'>
-      <header className='header'>
-        <p>Test</p>
-      </header>
+      <header className='header'></header>
       <form className='form' onSubmit={hendlerSearch}>
         {/* <input
           className='input'
