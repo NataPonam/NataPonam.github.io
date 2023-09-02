@@ -45,14 +45,14 @@ function App() {
       setSearchList(res);
     }
   }, []);
-  const [option, setOption] = useState([])
-  useEffect(()=>{
-    const arr = []
-    searchList.map(item=>{
-      arr.push({value: item.art, label: item.name})
-      setOption(arr)
-    })
-  },[searchList])
+  const [option, setOption] = useState([]);
+  useEffect(() => {
+    const arr = [];
+    searchList.map((item) => {
+      arr.push({ value: item.art, label: item.name });
+      setOption(arr);
+    });
+  }, [searchList]);
 
   // const handlerChange = (evt) => {
   //   setInput(evt.target.value);
@@ -60,9 +60,7 @@ function App() {
 
   return (
     <main className='main'>
-      <header className='header'>
-        <p>тест</p>
-      </header>
+      <header className='header'></header>
       <form className='form' onSubmit={hendlerSearch}>
         {/* <input
           className='input'
@@ -82,19 +80,21 @@ function App() {
           onChange={(evt) => {
             setInput(evt.value);
           }}
+          className='react-select-container'
+          classNamePrefix='react-select'
         ></Select>
         <button className='button' type='submit'>
           Отправить
         </button>
       </form>
-      <div className='block'>
+      <div className='block block_article'>
         <h2 className='block__title'>Артикул:</h2>
         <span className='block__span block__span_type-article'>
           {isArticle || 'Ничего не найдено'}
         </span>
       </div>
       <div className='block block_place'>
-        <h2 className='block__title'>Стелаж:</h2>
+        <h2 className='block__title'>Стеллаж:</h2>
         {isPlace.length > 0 ? (
           isPlace.map((item) => {
             return (

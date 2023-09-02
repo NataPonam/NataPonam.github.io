@@ -1,33 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .body {
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 .main {
-  max-width: 200px;
-  margin: 0 auto;
+  max-width: 300px;
+  min-height: 90vh;
+  margin: 20px auto;
 }
 .form {
   display: grid;
-  margin: 10px auto 0;
-  max-width: 200px;
+  /*margin: 10px auto 0;*/
+  max-width: 100%;
   position: relative;
+}
+
+/*select*/
+.react-select-container {
+  /* outline:none;*/
+}
+/*инпут*/
+.react-select__control {
+  border: 1px solid #5c82e2 !important;
+}
+/*индикатор-разделитель*/
+.react-select__indicator-separator {
+  background-color: #5c82e2 !important;
+  /*display: none;*/
+}
+/*галочка*/
+.react-select__indicator {
+  color: #5c82e2 !important;
 }
 
 .button {
   width: 100%;
-  margin: 10px auto 5px;
-  padding: 3px 0;
+  height: 38px;
+  margin-top: 10px;
   text-align: -moz-center;
   text-align: -webkit-center;
-  border-radius: 10px;
-  border: 1px solid;
-  box-shadow: 1px 1px #292c2ce3;
+  border-radius: 4px;
+  border: none;
+  background-color: #5c82e2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  /*box-shadow: 1px 1px #292c2ce3;*/
 }
 
 .button:active {
-  opacity: 0.5;
+  opacity: 0.7;
 }
-
+/*
 .input {
   width: 150px;
   margin: 10px auto 0;
@@ -45,46 +74,44 @@
 
 .input:focus {
   outline: none;
-}
+}*/
 
 .block {
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
   align-items: center;
   box-sizing: border-box;
+
+  margin-top: 10px;
   padding: 5px;
-  margin: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(53, 50, 50, 0.358);
+  border: 1px solid rgba(53, 50, 50, 0.358);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .block__title {
-  margin: 0;
+  
   font-size: 16px;
-  color: rgb(53, 50, 50);
+  color: rgba(72, 72, 72, 1);
+  font-weight: 600;
 }
 
 .block__span {
   margin: 0;
-  /*border-bottom: 1px solid black;*/
-  padding-bottom: 3px;
   text-align: center;
   font-size: 14px;
+  font-weight: 400;
 }
-
-.block__span_type-place {
-  width: 85px;
-  border: none;
+.block_article {
+  flex-direction: row;
+  justify-content: center;
+}
+.block__span_type-article {
+  padding-left: 10px;
+}
+.block__span_type-name {
+  text-align: left;
   white-space: break-spaces;
 }
 
-.header__time {
-  width: 100px;
-  margin: 15px auto;
-  text-align: center;
-}
-
-.main {
-  min-height: 90vh;
-}
